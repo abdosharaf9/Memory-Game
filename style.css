@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+body{
+    background: #012E40;
+}
+.title{
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 2em;
+}
+
+.matched{
+    color: #EAEAEA;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1em;
+}
+.hide{
+    display: none;
+}
+.background{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper{
+  padding: 25px;
+  border-radius: 10px;
+  background: #3CA6A6;
+  box-shadow: 0 10px 30px rgba(235, 229, 229, 0.1);
+}
+.cards, .card, .view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards{
+  height: 400px;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card{
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.card .view{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background: #EAEAEA;
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s linear;
+}
+.card .front-view img{
+  width: 19px;
+}
+.card .back-view img{
+  max-width: 45px;
+}
+.card .back-view{
+  transform: rotateY(-180deg);
+}
+.card.flip .back-view{
+  transform: rotateY(0);
+}
+.card.flip .front-view{
+  transform: rotateY(180deg);
+}
+.restart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#reset {
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #3CA6A6;
+}
+
+.signature {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 2em;
+}
+
+a:visited {
+    color: white;
+}
